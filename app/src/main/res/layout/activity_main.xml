@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="#75FFFFFF"
+        android:backgroundTint="#000000">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/tvLesson"
+            android:layout_width="253dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#F79327"
+            android:hint="Ders Adı Giriniz"
+            android:popupBackground="@color/black"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnerCredit"
+            android:layout_width="125dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#F79327"
+            android:entries="@array/allCredits"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvLesson"
+            app:layout_constraintTop_toBottomOf="@+id/tvLesson" />
+
+        <Spinner
+            android:id="@+id/spinnerLetter"
+            android:layout_width="125dp"
+            android:layout_height="26dp"
+            android:backgroundTint="#F79327"
+            android:entries="@array/allNotes"
+            app:layout_constraintEnd_toEndOf="@+id/tvLesson"
+            app:layout_constraintTop_toTopOf="@+id/spinnerCredit" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/add2"
+            android:rotation="0"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerLetter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvLesson"
+            app:layout_constraintTop_toTopOf="@+id/tvLesson" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#F79327">
+
+    </View>
+
+
+    <ScrollView
+        android:id="@+id/idScroll"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="#00FFFFFF">
+
+        <LinearLayout
+            android:id="@+id/idLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#F79327"
+        android:onClick="calculateAverage"
+        android:text="@string/calculate"
+
+
+        android:textColor="#FFFFFF">
+
+    </Button>
+
+
+</LinearLayout>

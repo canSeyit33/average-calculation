@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Ortalama Hesapla</string>
+    <string name="btnAdd">Ekle</string>
+    <string name="sil">Sil</string>
+    <string name="calculate">Hesapla</string>
+</resources>
